@@ -6,8 +6,9 @@ services:
     # volumes:
     #   - ~/volumes/jhipster/BasicStudentsManagment/postgresql/:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=BasicStudentsManagment
-      - POSTGRES_PASSWORD=
+      - DB_NAME=BSM
+      - POSTGRES_USER=BSM
+      - POSTGRES_PASSWORD=12345
       - POSTGRES_HOST_AUTH_METHOD=trust
     healthcheck:
       test: ['CMD-SHELL', 'pg_isready -U $${POSTGRES_USER}']
