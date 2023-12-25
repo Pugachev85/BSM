@@ -1,0 +1,78 @@
+entity AcademicYear {
+    title String required
+}
+
+entity StudyPlace {
+    title String required
+}
+
+entity Group {
+    title String required
+    acceptanceDate LocalDate
+}
+
+entity EducationalProgram {
+    title String required
+    monthLength Double required min(0.5) max(60.0)
+}
+
+entity AcademicSubject {
+    title String required
+    hours Integer required
+}
+
+entity Student {
+    alphabetBookNumber Long unique required
+    firstName String required
+    secondName String
+    lastName String required
+    birthDate LocalDate required
+}
+
+entity Employee {
+    firstName String  required
+    secondName String
+    lastName String  required
+    birthDate LocalDate  required
+    jobTitle String required
+}
+
+entity Order {
+    title String required
+    date LocalDate required
+    number Integer required min(1) max(9999)
+}
+
+entity PersonalGrade {
+    grade Integer required min(1) max(5)
+}
+
+relationship ManyToOne {
+    EducationalProgram{AcademicYear(title)} to AcademicYear
+    Student{Group(title)} to Group
+    Group{StudyPlace(title)} to StudyPlace
+    PersonalGrade{AcademicSubject(title)} to AcademicSubject
+    Group{EducationalProgram(title)} to EducationalProgram
+}
+
+relationship ManyToMany {
+    PersonalGrade{Student(alphabetBookNumber)} to Student{PersonalGrade(grade)}
+    Student{Order(date)} to Order{Student(alphabetBookNumber)}
+    EducationalProgram{AcademicSubject(title)} to AcademicSubject{EducationalProgram(title)}
+    Employee{AcademicSubject(title)} to AcademicSubject{Employee(title)}
+}
+
+
+// Set pagination options
+// paginate Employee, Student with infinite-scroll
+// paginate Job with pagination
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+//service all with serviceImpl except Employee, Job
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
+
