@@ -1,0 +1,17 @@
+{
+  "annotations": {
+    "changelogDate": "20231225184435"
+  },
+  "applications": "*",
+  "entityTableName": "study_place",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "StudyPlace",
+  "relationships": [],
+  "searchEngine": "no"
+}

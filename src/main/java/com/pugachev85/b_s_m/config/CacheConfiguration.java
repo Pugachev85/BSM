@@ -48,6 +48,23 @@ public class CacheConfiguration {
             createCache(cm, com.pugachev85.b_s_m.domain.User.class.getName());
             createCache(cm, com.pugachev85.b_s_m.domain.Authority.class.getName());
             createCache(cm, com.pugachev85.b_s_m.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.pugachev85.b_s_m.domain.AcademicYear.class.getName());
+            createCache(cm, com.pugachev85.b_s_m.domain.StudyPlace.class.getName());
+            createCache(cm, com.pugachev85.b_s_m.domain.Group.class.getName());
+            createCache(cm, com.pugachev85.b_s_m.domain.EducationalProgram.class.getName());
+            createCache(cm, com.pugachev85.b_s_m.domain.EducationalProgram.class.getName() + ".academicSubjects");
+            createCache(cm, com.pugachev85.b_s_m.domain.AcademicSubject.class.getName());
+            createCache(cm, com.pugachev85.b_s_m.domain.AcademicSubject.class.getName() + ".educationalPrograms");
+            createCache(cm, com.pugachev85.b_s_m.domain.AcademicSubject.class.getName() + ".employees");
+            createCache(cm, com.pugachev85.b_s_m.domain.Student.class.getName());
+            createCache(cm, com.pugachev85.b_s_m.domain.Student.class.getName() + ".orders");
+            createCache(cm, com.pugachev85.b_s_m.domain.Student.class.getName() + ".personalGrades");
+            createCache(cm, com.pugachev85.b_s_m.domain.Employee.class.getName());
+            createCache(cm, com.pugachev85.b_s_m.domain.Employee.class.getName() + ".academicSubjects");
+            createCache(cm, com.pugachev85.b_s_m.domain.Order.class.getName());
+            createCache(cm, com.pugachev85.b_s_m.domain.Order.class.getName() + ".students");
+            createCache(cm, com.pugachev85.b_s_m.domain.PersonalGrade.class.getName());
+            createCache(cm, com.pugachev85.b_s_m.domain.PersonalGrade.class.getName() + ".students");
             // jhipster-needle-ehcache-add-entry
         };
     }

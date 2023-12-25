@@ -1,0 +1,38 @@
+{
+  "annotations": {
+    "changelogDate": "20231225185035"
+  },
+  "applications": "*",
+  "entityTableName": "jhi_order",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "number",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required", "min", "max"],
+      "fieldValidateRulesMax": "9999",
+      "fieldValidateRulesMin": "1"
+    }
+  ],
+  "name": "Order",
+  "relationships": [
+    {
+      "otherEntityField": "alphabetBookNumber",
+      "otherEntityName": "student",
+      "otherEntityRelationshipName": "order",
+      "relationshipName": "student",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

@@ -1,0 +1,40 @@
+{
+  "annotations": {
+    "changelogDate": "20231225184635"
+  },
+  "applications": "*",
+  "entityTableName": "educational_program",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "monthLength",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required", "min", "max"],
+      "fieldValidateRulesMax": "60.0",
+      "fieldValidateRulesMin": "0.5"
+    }
+  ],
+  "name": "EducationalProgram",
+  "relationships": [
+    {
+      "otherEntityField": "title",
+      "otherEntityName": "academicYear",
+      "relationshipName": "academicYear",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "title",
+      "otherEntityName": "academicSubject",
+      "otherEntityRelationshipName": "educationalProgram",
+      "relationshipName": "academicSubject",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

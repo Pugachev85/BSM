@@ -1,0 +1,27 @@
+{
+  "basicStudentsManagmentApp": {
+    "educationalProgram": {
+      "home": {
+        "title": "Educational Programs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Educational Program",
+        "createOrEditLabel": "Create or edit a Educational Program",
+        "notFound": "No Educational Programs found"
+      },
+      "created": "A new Educational Program is created with identifier {{ param }}",
+      "updated": "A Educational Program is updated with identifier {{ param }}",
+      "deleted": "A Educational Program is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Educational Program {{ id }}?"
+      },
+      "detail": {
+        "title": "Educational Program"
+      },
+      "id": "ID",
+      "title": "Title",
+      "monthLength": "Month Length",
+      "academicYear": "Academic Year",
+      "academicSubject": "Academic Subject"
+    }
+  }
+}

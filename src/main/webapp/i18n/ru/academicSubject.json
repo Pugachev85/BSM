@@ -1,0 +1,27 @@
+{
+  "basicStudentsManagmentApp": {
+    "academicSubject": {
+      "home": {
+        "title": "Academic Subjects",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Academic Subject",
+        "createOrEditLabel": "Создать или отредактировать Academic Subject",
+        "notFound": "Academic Subjects не найдено"
+      },
+      "created": "Новый Academic Subject создан с идентификатором {{ param }}",
+      "updated": "Academic Subject обновлен с идентификатором {{ param }}",
+      "deleted": "Academic Subject удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Academic Subject {{ id }}?"
+      },
+      "detail": {
+        "title": "Academic Subject"
+      },
+      "id": "ID",
+      "title": "Title",
+      "hours": "Hours",
+      "educationalProgram": "Educational Program",
+      "employee": "Employee"
+    }
+  }
+}

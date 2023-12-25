@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity EducationalProgram.
+    -->
+    <changeSet id="20231225184635-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="academic_year_id"
+                                 baseTableName="educational_program"
+                                 constraintName="fk_educational_program__academic_year_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="academic_year"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="educational_program_id"
+                                 baseTableName="rel_educational_program__academic_subject"
+                                 constraintName="fk_rel_educational_program__aca__educational_program_d6_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="educational_program"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="academic_subject_id"
+                                 baseTableName="rel_educational_program__academic_subject"
+                                 constraintName="fk_rel_educational_program__aca__academic_subject_a9_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="academic_subject"
+                                 />
+    </changeSet>
+</databaseChangeLog>
