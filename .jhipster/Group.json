@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "changelogDate": "20231225184535"
+  },
+  "applications": "*",
+  "entityTableName": "jhi_group",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "acceptanceDate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "name": "Group",
+  "relationships": [
+    {
+      "otherEntityField": "title",
+      "otherEntityName": "studyPlace",
+      "relationshipName": "studyPlace",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "title",
+      "otherEntityName": "educationalProgram",
+      "relationshipName": "educationalProgram",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

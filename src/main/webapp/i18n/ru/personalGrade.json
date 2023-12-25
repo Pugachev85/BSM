@@ -1,0 +1,26 @@
+{
+  "basicStudentsManagmentApp": {
+    "personalGrade": {
+      "home": {
+        "title": "Personal Grades",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Personal Grade",
+        "createOrEditLabel": "Создать или отредактировать Personal Grade",
+        "notFound": "Personal Grades не найдено"
+      },
+      "created": "Новый Personal Grade создан с идентификатором {{ param }}",
+      "updated": "Personal Grade обновлен с идентификатором {{ param }}",
+      "deleted": "Personal Grade удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Personal Grade {{ id }}?"
+      },
+      "detail": {
+        "title": "Personal Grade"
+      },
+      "id": "ID",
+      "grade": "Grade",
+      "academicSubject": "Academic Subject",
+      "student": "Student"
+    }
+  }
+}

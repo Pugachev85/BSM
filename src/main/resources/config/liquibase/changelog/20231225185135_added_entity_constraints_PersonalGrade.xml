@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity PersonalGrade.
+    -->
+    <changeSet id="20231225185135-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="academic_subject_id"
+                                 baseTableName="personal_grade"
+                                 constraintName="fk_personal_grade__academic_subject_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="academic_subject"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="personal_grade_id"
+                                 baseTableName="rel_personal_grade__student"
+                                 constraintName="fk_rel_personal_grade__student__personal_grade_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="personal_grade"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="student_id"
+                                 baseTableName="rel_personal_grade__student"
+                                 constraintName="fk_rel_personal_grade__student__student_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="student"
+                                 />
+    </changeSet>
+</databaseChangeLog>

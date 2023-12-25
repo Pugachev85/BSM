@@ -1,0 +1,60 @@
+{
+  "annotations": {
+    "changelogDate": "20231225184835"
+  },
+  "applications": "*",
+  "entityTableName": "student",
+  "fields": [
+    {
+      "fieldName": "alphabetBookNumber",
+      "fieldType": "Long",
+      "fieldValidateRules": ["unique", "required"]
+    },
+    {
+      "fieldName": "firstName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "secondName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "birthDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "Student",
+  "relationships": [
+    {
+      "otherEntityField": "title",
+      "otherEntityName": "group",
+      "relationshipName": "group",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "date",
+      "otherEntityName": "order",
+      "otherEntityRelationshipName": "student",
+      "relationshipName": "order",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "grade",
+      "otherEntityName": "personalGrade",
+      "otherEntityRelationshipName": "student",
+      "relationshipName": "personalGrade",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

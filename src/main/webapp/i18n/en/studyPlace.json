@@ -1,0 +1,24 @@
+{
+  "basicStudentsManagmentApp": {
+    "studyPlace": {
+      "home": {
+        "title": "Study Places",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Study Place",
+        "createOrEditLabel": "Create or edit a Study Place",
+        "notFound": "No Study Places found"
+      },
+      "created": "A new Study Place is created with identifier {{ param }}",
+      "updated": "A Study Place is updated with identifier {{ param }}",
+      "deleted": "A Study Place is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Study Place {{ id }}?"
+      },
+      "detail": {
+        "title": "Study Place"
+      },
+      "id": "ID",
+      "title": "Title"
+    }
+  }
+}

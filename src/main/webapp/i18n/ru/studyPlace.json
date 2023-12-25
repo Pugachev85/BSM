@@ -1,0 +1,24 @@
+{
+  "basicStudentsManagmentApp": {
+    "studyPlace": {
+      "home": {
+        "title": "Study Places",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Study Place",
+        "createOrEditLabel": "Создать или отредактировать Study Place",
+        "notFound": "Study Places не найдено"
+      },
+      "created": "Новый Study Place создан с идентификатором {{ param }}",
+      "updated": "Study Place обновлен с идентификатором {{ param }}",
+      "deleted": "Study Place удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Study Place {{ id }}?"
+      },
+      "detail": {
+        "title": "Study Place"
+      },
+      "id": "ID",
+      "title": "Title"
+    }
+  }
+}

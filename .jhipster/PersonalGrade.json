@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "changelogDate": "20231225185135"
+  },
+  "applications": "*",
+  "entityTableName": "personal_grade",
+  "fields": [
+    {
+      "fieldName": "grade",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required", "min", "max"],
+      "fieldValidateRulesMax": "5",
+      "fieldValidateRulesMin": "1"
+    }
+  ],
+  "name": "PersonalGrade",
+  "relationships": [
+    {
+      "otherEntityField": "title",
+      "otherEntityName": "academicSubject",
+      "relationshipName": "academicSubject",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "alphabetBookNumber",
+      "otherEntityName": "student",
+      "otherEntityRelationshipName": "personalGrade",
+      "relationshipName": "student",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

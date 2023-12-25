@@ -1,0 +1,45 @@
+{
+  "annotations": {
+    "changelogDate": "20231225184935"
+  },
+  "applications": "*",
+  "entityTableName": "employee",
+  "fields": [
+    {
+      "fieldName": "firstName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "secondName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "birthDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "jobTitle",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "Employee",
+  "relationships": [
+    {
+      "otherEntityField": "title",
+      "otherEntityName": "academicSubject",
+      "otherEntityRelationshipName": "employee",
+      "relationshipName": "academicSubject",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

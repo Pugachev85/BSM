@@ -1,0 +1,27 @@
+{
+  "basicStudentsManagmentApp": {
+    "academicSubject": {
+      "home": {
+        "title": "Academic Subjects",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Academic Subject",
+        "createOrEditLabel": "Create or edit a Academic Subject",
+        "notFound": "No Academic Subjects found"
+      },
+      "created": "A new Academic Subject is created with identifier {{ param }}",
+      "updated": "A Academic Subject is updated with identifier {{ param }}",
+      "deleted": "A Academic Subject is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Academic Subject {{ id }}?"
+      },
+      "detail": {
+        "title": "Academic Subject"
+      },
+      "id": "ID",
+      "title": "Title",
+      "hours": "Hours",
+      "educationalProgram": "Educational Program",
+      "employee": "Employee"
+    }
+  }
+}

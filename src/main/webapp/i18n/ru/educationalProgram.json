@@ -1,0 +1,27 @@
+{
+  "basicStudentsManagmentApp": {
+    "educationalProgram": {
+      "home": {
+        "title": "Educational Programs",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Educational Program",
+        "createOrEditLabel": "Создать или отредактировать Educational Program",
+        "notFound": "Educational Programs не найдено"
+      },
+      "created": "Новый Educational Program создан с идентификатором {{ param }}",
+      "updated": "Educational Program обновлен с идентификатором {{ param }}",
+      "deleted": "Educational Program удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Educational Program {{ id }}?"
+      },
+      "detail": {
+        "title": "Educational Program"
+      },
+      "id": "ID",
+      "title": "Title",
+      "monthLength": "Month Length",
+      "academicYear": "Academic Year",
+      "academicSubject": "Academic Subject"
+    }
+  }
+}

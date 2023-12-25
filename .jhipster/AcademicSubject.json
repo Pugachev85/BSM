@@ -1,0 +1,39 @@
+{
+  "annotations": {
+    "changelogDate": "20231225184735"
+  },
+  "applications": "*",
+  "entityTableName": "academic_subject",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "hours",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "AcademicSubject",
+  "relationships": [
+    {
+      "otherEntityField": "title",
+      "otherEntityName": "educationalProgram",
+      "otherEntityRelationshipName": "academicSubject",
+      "relationshipName": "educationalProgram",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "title",
+      "otherEntityName": "employee",
+      "otherEntityRelationshipName": "academicSubject",
+      "relationshipName": "employee",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

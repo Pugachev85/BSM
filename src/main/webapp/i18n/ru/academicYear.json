@@ -1,0 +1,24 @@
+{
+  "basicStudentsManagmentApp": {
+    "academicYear": {
+      "home": {
+        "title": "Academic Years",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Academic Year",
+        "createOrEditLabel": "Создать или отредактировать Academic Year",
+        "notFound": "Academic Years не найдено"
+      },
+      "created": "Новый Academic Year создан с идентификатором {{ param }}",
+      "updated": "Academic Year обновлен с идентификатором {{ param }}",
+      "deleted": "Academic Year удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Academic Year {{ id }}?"
+      },
+      "detail": {
+        "title": "Academic Year"
+      },
+      "id": "ID",
+      "title": "Title"
+    }
+  }
+}
