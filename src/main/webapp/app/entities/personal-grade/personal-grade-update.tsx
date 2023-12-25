@@ -1,19 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { Button, Row, Col, FormText } from 'reactstrap';
+import { Button, Col, Row } from 'reactstrap';
 import { isNumber, Translate, translate, ValidatedField, ValidatedForm } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateTime } from 'app/shared/util/date-utils';
 import { mapIdList } from 'app/shared/util/entity-utils';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
-
-import { IAcademicSubject } from 'app/shared/model/academic-subject.model';
 import { getEntities as getAcademicSubjects } from 'app/entities/academic-subject/academic-subject.reducer';
-import { IStudent } from 'app/shared/model/student.model';
 import { getEntities as getStudents } from 'app/entities/student/student.reducer';
-import { IPersonalGrade } from 'app/shared/model/personal-grade.model';
-import { getEntity, updateEntity, createEntity, reset } from './personal-grade.reducer';
+import { createEntity, getEntity, reset, updateEntity } from './personal-grade.reducer';
 
 export const PersonalGradeUpdate = () => {
   const dispatch = useAppDispatch();
@@ -151,7 +145,7 @@ export const PersonalGradeUpdate = () => {
                 {students
                   ? students.map(otherEntity => (
                       <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.alphabetBookNumber}
+                        № {otherEntity.alphabetBookNumber} ({otherEntity.secondName} {otherEntity.firstName})
                       </option>
                     ))
                   : null}

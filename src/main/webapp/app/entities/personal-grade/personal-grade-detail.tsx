@@ -48,7 +48,9 @@ export const PersonalGradeDetail = () => {
             {personalGradeEntity.students
               ? personalGradeEntity.students.map((val, i) => (
                   <span key={val.id}>
-                    <a>{val.alphabetBookNumber}</a>
+                    <a>
+                      {val.secondName} {val.firstName} (№ {val.alphabetBookNumber})
+                    </a>
                     {personalGradeEntity.students && i === personalGradeEntity.students.length - 1 ? '' : ', '}
                   </span>
                 ))

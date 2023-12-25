@@ -88,17 +88,17 @@ export const PersonalGrade = () => {
                   <Translate contentKey="basicStudentsManagmentApp.personalGrade.id">ID</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('id')} />
                 </th>
-                <th className="hand" onClick={sort('grade')}>
-                  <Translate contentKey="basicStudentsManagmentApp.personalGrade.grade">Grade</Translate>{' '}
-                  <FontAwesomeIcon icon={getSortIconByFieldName('grade')} />
+                <th>
+                  <Translate contentKey="basicStudentsManagmentApp.personalGrade.student">Student</Translate>{' '}
+                  <FontAwesomeIcon icon="sort" />
                 </th>
                 <th>
                   <Translate contentKey="basicStudentsManagmentApp.personalGrade.academicSubject">Academic Subject</Translate>{' '}
                   <FontAwesomeIcon icon="sort" />
                 </th>
-                <th>
-                  <Translate contentKey="basicStudentsManagmentApp.personalGrade.student">Student</Translate>{' '}
-                  <FontAwesomeIcon icon="sort" />
+                <th className="hand" onClick={sort('grade')}>
+                  <Translate contentKey="basicStudentsManagmentApp.personalGrade.grade">Grade</Translate>{' '}
+                  <FontAwesomeIcon icon={getSortIconByFieldName('grade')} />
                 </th>
                 <th />
               </tr>
@@ -111,7 +111,18 @@ export const PersonalGrade = () => {
                       {personalGrade.id}
                     </Button>
                   </td>
-                  <td>{personalGrade.grade}</td>
+                  <td>
+                    {personalGrade.students
+                      ? personalGrade.students.map((val, j) => (
+                          <span key={j}>
+                            <Link to={`/student/${val.id}`}>
+                              {val.secondName} {val.firstName} (№ {val.alphabetBookNumber})
+                            </Link>
+                            {j === personalGrade.students.length - 1 ? '' : ', '}
+                          </span>
+                        ))
+                      : null}
+                  </td>
                   <td>
                     {personalGrade.academicSubject ? (
                       <Link to={`/academic-subject/${personalGrade.academicSubject.id}`}>{personalGrade.academicSubject.title}</Link>
@@ -119,16 +130,7 @@ export const PersonalGrade = () => {
                       ''
                     )}
                   </td>
-                  <td>
-                    {personalGrade.students
-                      ? personalGrade.students.map((val, j) => (
-                          <span key={j}>
-                            <Link to={`/student/${val.id}`}>{val.alphabetBookNumber}</Link>
-                            {j === personalGrade.students.length - 1 ? '' : ', '}
-                          </span>
-                        ))
-                      : null}
-                  </td>
+                  <td>{personalGrade.grade}</td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`/personal-grade/${personalGrade.id}`} color="info" size="sm" data-cy="entityDetailsButton">
